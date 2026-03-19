@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,10 +9,9 @@ import { Router } from '@angular/router';
 })
 export class Card {
   private router = inject(Router);
-
-  index = 1;
-
+  @Input() module!: any;
+   
   open() {
-    this.router.navigate(['/module', this.index]);
+    this.router.navigate(['/module', this.module.id]);
   }
 }

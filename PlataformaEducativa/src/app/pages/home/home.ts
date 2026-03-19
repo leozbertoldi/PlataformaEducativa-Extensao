@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Card } from "../../components/card/card";
 import { CommonModule } from "@angular/common";
+import { Modules } from "../../models/module";
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,6 @@ import { CommonModule } from "@angular/common";
   styleUrl: './home.css',
 })
 export class Home {
-  cards = 15;
-  cardsArray = Array.from({ length: this.cards });
+  modules = Modules;
+
 }
