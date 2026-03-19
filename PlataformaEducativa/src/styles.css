@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@layer components {
+  .btn-back {
+    @apply flex items-center
+           text-zinc-800 font-medium 
+           bg-red-300
+           px-4 py-2 rounded-lg 
+           hover:bg-red-400
+           cursor-pointer
+           transition duration-200;
+  }
+
+  .bg-pastel-blue {
+    @apply bg-[#A7C7E7];
+  }
+
+  .bg-pastel-green {
+    @apply bg-[#BEE3DB];
+  }
+
+  .bg-pastel-yellow {
+    @apply bg-[#FFF3B0];
+  }
+
+  .bg-pastel-purple {
+    @apply bg-[#D7C0F2];
+  }
+
+  .bg-pastel-pink {
+    @apply bg-[#F7C8E0];
+  }
+
+  .bg-pastel-orange {
+    @apply bg-[#FFD6A5];
+  }
+}
+
+
