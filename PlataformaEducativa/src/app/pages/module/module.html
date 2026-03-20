@@ -1,1 +1,18 @@
-<p>module works!</p>
+@if (!module) {
+  <p>Carregando...</p>
+}
+@else {
+    <div class="min-h-screen p-4" [ngClass]="module?.color">
+        <button class="btn-back" (click)="back()"> 
+            <span class="material-icons text-xl">arrow_back</span>
+        </button>
+        @switch (module?.id) {
+            @case ('MathGame') {
+                <app-math-game></app-math-game>
+            }
+            @case ('quiz') {
+                <h1>quiz</h1>
+            }
+        }
+    </div>
+}
