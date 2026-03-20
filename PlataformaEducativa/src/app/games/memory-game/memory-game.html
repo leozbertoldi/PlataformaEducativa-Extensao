@@ -1,0 +1,18 @@
+<div class="flex flex-col items-center justify-center min-h-[70vh]">
+    <h1 class="text-4xl font-bold mb-12">Round: {{ round() }}</h1>
+    <div class="grid grid-cols-3 gap-4">
+        @for (card of cards; track card) {
+            <div class="bg-zinc-50 min-w-24 h-24 border-2 rounded-2xl" (click)="selectCard(card)"></div>
+        }
+    </div>
+
+</div>
+<div>{{ isPlaying() }}</div>
+<div class="flex items-center justify-center">
+    @if (isPlaying()) {
+        <p class="animate-pulse text-zinc-700">Decore a sequência...</p>
+    }
+    @else {
+        <p class="text-zinc-700">Sua vez!</p>
+    }
+</div>

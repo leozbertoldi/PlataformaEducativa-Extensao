@@ -6,4 +6,11 @@ export const Modules = [
     icon: '➕➖✖️➗',
     color: 'bg-pastel-blue',
   },
+  {
+    id: 'MemoryGame',
+    title: 'Memory Game',
+    description: 'A game to improve your memory.',
+    icon: '🧠',
+    color: 'bg-pastel-yellow',
+  }
 ];
