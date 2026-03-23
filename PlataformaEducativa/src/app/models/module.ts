@@ -27,4 +27,11 @@ export const Modules = [
     icon: '🏆',
     color: 'bg-pastel-purple',
   },
+  {
+    id: 'ColorGame',
+    title: 'Cores Loucas',
+    description: 'Identifique cores e números rápido neste jogo divertido.',
+    icon: '🎨',
+    color: 'bg-pastel-orange',
+  },
 ];

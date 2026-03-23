@@ -6,10 +6,11 @@ import { MathGame } from '../../games/math-game/math-game';
 import { MemoryGame } from '../../games/memory-game/memory-game';
 import { SequenceGame } from '../../games/sequence-game/sequence-game';
 import { BiggerGame } from '../../games/bigger-game/bigger-game';
+import { ColorGame } from '../../games/color-game/color-game';
 
 @Component({
   selector: 'app-module',
-  imports: [MathGame, MemoryGame, SequenceGame, BiggerGame, NgClass],
+  imports: [MathGame, MemoryGame, SequenceGame, BiggerGame, ColorGame, NgClass],
   templateUrl: './module.html',
   styleUrl: './module.css',
 })
