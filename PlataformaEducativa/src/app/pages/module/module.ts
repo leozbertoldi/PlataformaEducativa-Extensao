@@ -4,10 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { MathGame } from '../../games/math-game/math-game';
 import { MemoryGame } from '../../games/memory-game/memory-game';
+import { SequenceGame } from '../../games/sequence-game/sequence-game';
 
 @Component({
   selector: 'app-module',
-  imports: [MathGame, MemoryGame, NgClass],
+  imports: [MathGame, MemoryGame, SequenceGame, NgClass],
   templateUrl: './module.html',
   styleUrl: './module.css',
 })

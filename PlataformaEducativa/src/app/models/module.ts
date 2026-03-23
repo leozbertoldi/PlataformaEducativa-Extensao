@@ -1,16 +1,23 @@
 export const Modules = [
   {
     id: 'MathGame',
-    title: 'Math Game',
-    description: 'A fun math game to test your skills.',
+    title: 'Operações Matemáticas',
+    description: 'Melhore suas habilidades matemáticas com este jogo divertido.',
     icon: '➕➖✖️➗',
     color: 'bg-pastel-blue',
   },
   {
     id: 'MemoryGame',
-    title: 'Memory Game',
-    description: 'A game to improve your memory.',
+    title: 'Decore a Sequência',
+    description: 'Um jogo para melhorar sua memória visual e concentração.',
     icon: '🧠',
     color: 'bg-pastel-yellow',
+  },
+  {
+    id: 'SequenceGame',
+    title: 'Próximo da Sequência',
+    description: 'Pratique identificar padrões e sequências.',
+    icon: '🔢',
+    color: 'bg-pastel-pink',
   }
 ];
