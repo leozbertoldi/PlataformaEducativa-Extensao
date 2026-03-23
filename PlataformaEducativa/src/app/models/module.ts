@@ -19,5 +19,12 @@ export const Modules = [
     description: 'Pratique identificar padrões e sequências.',
     icon: '🔢',
     color: 'bg-pastel-pink',
-  }
+  },
+  {
+    id: 'BiggerGame',
+    title: 'Qual é o Maior?',
+    description: 'Teste suas habilidades de comparação numérica.',
+    icon: '🏆',
+    color: 'bg-pastel-purple',
+  },
 ];

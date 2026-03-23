@@ -5,10 +5,11 @@ import { NgClass } from '@angular/common';
 import { MathGame } from '../../games/math-game/math-game';
 import { MemoryGame } from '../../games/memory-game/memory-game';
 import { SequenceGame } from '../../games/sequence-game/sequence-game';
+import { BiggerGame } from '../../games/bigger-game/bigger-game';
 
 @Component({
   selector: 'app-module',
-  imports: [MathGame, MemoryGame, SequenceGame, NgClass],
+  imports: [MathGame, MemoryGame, SequenceGame, BiggerGame, NgClass],
   templateUrl: './module.html',
   styleUrl: './module.css',
 })

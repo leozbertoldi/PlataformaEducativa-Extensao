@@ -33,7 +33,7 @@ export class SequenceGame {
       this.sequence.push(number);
     }
     
-    this.correctNumber = this.sequence[this.sequence.length - 1] + razao;
+    this.correctNumber = (this.sequence[this.sequence.length - 1] + razao) * multiplicador;
     this.options = [
       this.correctNumber,
       this.correctNumber + 1,

@@ -1,0 +1,41 @@
+<div class="flex flex-col items-center justify-center min-h-[70vh]">
+
+  <!-- PERGUNTA -->
+  <h1 class="text-2xl font-bold lg:text-4xl">
+    Qual das opções é maior?
+  </h1>
+
+  <!-- OPÇÕES -->
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full lg:w-2/3 mt-8">
+    @for (op of options; track op) {
+      <button
+        (click)="answer(op)"
+        class="p-4 rounded-xl border text-2xl font-semibold
+               hover:scale-105 active:scale-95 transition 
+               bg-zinc-50 cursor-pointer lg:text-3xl">
+
+        {{ op.label }}
+      </button>
+    }
+  </div>
+  
+</div>
+
+<!-- FEEDBACK -->
+@if (selectedOption !== null) {
+<p class="text-xl font-medium">
+    @if (selectedOption === correctNumber) {
+    <div class="flex flex-col items-center justify-between gap-4">
+        ✅ Correto!
+        <button class="flex flex-row items-center justify-center 
+                gap-2 bg-pastel-green text-gray-800 py-2 px-4 
+                cursor-pointer rounded-lg hover:bg-green-200"
+                (click)="generateOptions()">
+            Próxima Pergunta  <span class="material-icons text-xl">arrow_forward</span>
+        </button>
+    </div>
+    } @else {
+    <div class="flex items-center justify-center">❌ Tente novamente!</div>
+    }
+</p>
+}
