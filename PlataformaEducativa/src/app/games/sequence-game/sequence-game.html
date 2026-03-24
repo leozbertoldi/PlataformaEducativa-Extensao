@@ -10,7 +10,7 @@
 
   <!-- OPÇÕES -->
   <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full lg:w-2/3 mt-8">
-    @for (op of options; track op) {
+    @for (op of options; track $index) {
       <button
         (click)="answer(op)"
         class="p-4 rounded-xl border text-2xl font-semibold

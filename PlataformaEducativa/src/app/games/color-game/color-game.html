@@ -14,7 +14,7 @@
 
     <!-- OPÇÕES -->
     <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 w-full max-w-5xl mx-auto">
-        @for (number of numbers; track number) {
+        @for (number of numbers; track $index) {
             <button
                 (click)="checkAnswer({ number: number.number, color: number.color, isEven: number.isEven })"
                 [style.color]="colorMap[number.color]"
