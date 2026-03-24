@@ -23,6 +23,9 @@ export class ColorGame {
   correctColor = this.colors[Math.random() * this.colors.length | 0];
   titleColor = this.colors[Math.random() * this.colors.length | 0];
   numbers: item[] = this.generateNumbers();
+  isPlaying = signal(false);
+  correctAnswer = signal(false);
+  wrongAnswer = signal(false);
 
   colorMap: Record<string, string> = {
     vermelho: '#ef4444', // red-500
@@ -42,16 +45,26 @@ export class ColorGame {
     this.paridade = this.number % 2 === 0 ? 'par' : 'ímpar';
     this.correctColor = this.colors[Math.random() * this.colors.length | 0];
     this.titleColor = this.colors[Math.random() * this.colors.length | 0];
-    this.numbers = this.generateNumbers();
+    this.numbers = this.generateNumbers();  
+    this.isPlaying.set(false);
+    this.correctAnswer.set(false);
+    this.wrongAnswer.set(false);
   }
 
   checkAnswer(item: item) {
+    if (this.isPlaying()) return;
+
+    this.isPlaying.set(true);
     if (item.number === this.number && item.color === this.correctColor) {
-      alert('Parabéns! Você acertou!');
-      this.generateNewRound();
+      this.correctAnswer.set(true);
+      setTimeout(() => {
+        this.generateNewRound();
+      }, 1000);
     } 
     else {
-      this.gameOver();
+      this.correctAnswer.set(false);
+      this.wrongAnswer.set(true);
+      this.isPlaying.set(false); 
     }
   }
 
@@ -79,10 +92,5 @@ export class ColorGame {
     }
 
     return numbers.sort(() => Math.random() - 0.5);
-  }
-
-  gameOver() {
-    alert('Game Over! Tente novamente.');
-    this.generateNewRound();
   }
 }

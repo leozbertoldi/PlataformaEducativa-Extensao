@@ -28,3 +28,16 @@
     </div>
 
 </div>
+
+@if (isPlaying() || wrongAnswer()) {
+    @if (correctAnswer()) {
+        <div class="flex items-center justify-center">
+            <h2 class="text-2xl font-bold mb-4">Parabéns! Você <span class="text-green-500">acertou</span>!</h2>
+        </div>
+    }
+    @else if (correctAnswer() === false) {
+        <div class="flex items-center justify-center">
+            <h2 class="text-2xl font-bold mb-4"><span class="text-red-500">Você errou. </span>Tente novamente!</h2>
+        </div>
+    }
+}
