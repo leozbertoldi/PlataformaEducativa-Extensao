@@ -97,6 +97,7 @@ export class MemoryGame {
         this.startGame();
       }, 2000);
     } else if (this.userSequence.length === this.sequence.length) {
+      this.isPlaying.set(true);
       setTimeout(() => this.nextRound(), 1000);
     }
   }
