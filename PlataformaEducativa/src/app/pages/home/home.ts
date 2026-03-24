@@ -3,10 +3,11 @@ import { Card } from "../../components/card/card";
 import { CommonModule } from "@angular/common";
 import { Modules } from "../../models/module";
 import { Header } from '../../components/header/header';
+import { Footer } from '../../components/footer/footer';
 
 @Component({
   selector: 'app-home',
-  imports: [Card, CommonModule, Header],
+  imports: [Card, CommonModule, Header, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

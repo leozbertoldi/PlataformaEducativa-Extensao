@@ -34,4 +34,11 @@ export const Modules = [
     icon: '🎨',
     color: 'bg-pastel-orange',
   },
+  {
+    id: 'ExpressionGame',
+    title: 'Expressões Numéricas',
+    description: 'Resolva expressões matemáticas para testar seu conhecimento.',
+    icon: '🧮',
+    color: 'bg-pastel-green',
+  }
 ];
