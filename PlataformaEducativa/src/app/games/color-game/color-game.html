@@ -1,12 +1,30 @@
 <div class="flex flex-col items-center justify-center gap-8 min-h-[70vh]">
 
     <!-- PERGUNTA -->
-    <h1 class="text-4xl font-bold lg:text-6xl">
-        Selecione o número {{ paridade | uppercase }} de cor {{ correctColor | uppercase }}!
+    <h1 class="text-xl font-bold lg:text-4xl mt-8 text-center leading-snug">
+        Selecione o número
+        <span class="whitespace-nowrap text-white">
+            {{ paridade | uppercase }}
+        </span>
+        de cor
+        <span class="whitespace-nowrap" [style.color]="colorMap[titleColor]">
+            {{ correctColor | uppercase }}
+        </span>!
     </h1>
 
     <!-- OPÇÕES -->
-    
-
+    <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 w-full max-w-5xl mx-auto">
+        @for (number of numbers; track number) {
+            <button
+                (click)="checkAnswer({ number: number.number, color: number.color, isEven: number.isEven })"
+                [style.color]="colorMap[number.color]"
+                class="p-2 rounded-xl text-5xl font-bold
+                    hover:scale-105 active:scale-95 transition 
+                    bg-pastel-orange cursor-pointer lg:text-6xl">
+                
+                {{ number.number }}
+            </button>
+        }
+    </div>
 
 </div>
