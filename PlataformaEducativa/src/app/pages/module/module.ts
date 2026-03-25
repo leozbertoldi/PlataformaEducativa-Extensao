@@ -8,10 +8,11 @@ import { SequenceGame } from '../../games/sequence-game/sequence-game';
 import { BiggerGame } from '../../games/bigger-game/bigger-game';
 import { ColorGame } from '../../games/color-game/color-game';
 import { ExpressionGame } from '../../games/expression-game/expression-game';
+import { AimGame } from '../../games/aim-game/aim-game';
 
 @Component({
   selector: 'app-module',
-  imports: [MathGame, MemoryGame, SequenceGame, BiggerGame, ColorGame, ExpressionGame, NgClass],
+  imports: [MathGame, MemoryGame, SequenceGame, BiggerGame, ColorGame, ExpressionGame, AimGame, NgClass],
   templateUrl: './module.html',
   styleUrl: './module.css',
 })

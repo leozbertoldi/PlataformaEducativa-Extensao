@@ -1,0 +1,44 @@
+<!-- TOPO (HUD) -->
+<div class="flex gap-8 text-xl font-bold items-center justify-center py-4 tabular-nums">
+    <span class="text-4xl">⏱️ {{ timeLeft() }}s</span>
+    <span class="text-4xl">🎯 {{ score().toString().padStart(2, '0') }}</span>
+</div>
+
+<div class="flex flex-col relative w-full h-full items-center justify-center gap-8 min-h-[70vh]">
+
+
+  <!-- ÁREA DO JOGO -->
+  <div>
+
+    @if (isPlaying()) {
+      <div
+        (click)="hitTarget()"
+        class="absolute bg-red-500 rounded-full cursor-pointer
+               hover:scale-110 active:scale-95 transition border-4 border-white"
+        [style.width.px]="target.size"
+        [style.height.px]="target.size"
+        [style.left.%]="target.x"
+        [style.top.%]="target.y">
+      </div>
+    }
+
+  </div>
+
+  <!-- BOTTOM FIXO -->
+  <div class="p-6 flex flex-col items-center gap-4">
+
+    @if (!isPlaying()) {
+      <button
+        (click)="startGame()"
+        class="px-6 py-3 bg-blue-500 text-white text-2xl rounded-xl">
+        Começar
+      </button>
+
+      <h1 class="text-xl lg:text-2xl font-bold">
+        Maior Pontuação: {{ highScore() }}
+      </h1>
+    }
+
+  </div>
+
+</div>
