@@ -2,7 +2,7 @@
 
   <!-- PERGUNTA -->
   <h1 class="text-4xl font-bold lg:text-6xl">
-    {{ num1 }} {{ getOperationSymbol() }} {{ num2 }}
+    {{ expression }}
   </h1>
 
   <!-- OPÇÕES -->
@@ -29,7 +29,7 @@
         <button class="flex flex-row items-center justify-center 
                 gap-2 bg-pastel-green text-gray-800 py-2 px-4 
                 cursor-pointer rounded-lg hover:bg-green-200"
-                (click)="GenerateQuestion()">
+                (click)="generateQuestion()">
             Próxima Pergunta  <span class="material-icons text-xl">arrow_forward</span>
         </button>
     </div>

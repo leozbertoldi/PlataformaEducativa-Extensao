@@ -34,6 +34,16 @@
   .bg-pastel-orange {
     @apply bg-[#FFD6A5];
   }
+
+  .bg-pastel-cyan {
+    @apply bg-[#C9F9FF];
+  }
+
+  .bg-pastel-mint {
+    @apply bg-[#D1FAE5];
+  }
+
 }
+
 
 

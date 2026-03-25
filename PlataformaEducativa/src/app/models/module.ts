@@ -43,4 +43,18 @@ export const Modules = [
     color: 'bg-pastel-green',
   },
   
+  {
+    id: 'ExpressionGame',
+    title: 'Expressões Numéricas',
+    description: 'Resolva expressões matemáticas para testar seu conhecimento.',
+    icon: '🧮',
+    color: 'bg-pastel-mint',
+  },
+  {
+    id: "AimGame",
+    title: "Tiro ao Alvo",
+    description: "Teste sua precisão e reflexos com este jogo de tiro ao alvo.",
+    icon: "🎯",
+    color: "bg-pastel-cyan"
+  },
 ];
