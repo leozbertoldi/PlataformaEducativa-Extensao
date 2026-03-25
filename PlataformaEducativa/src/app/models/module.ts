@@ -34,6 +34,15 @@ export const Modules = [
     icon: '🎨',
     color: 'bg-pastel-orange',
   },
+
+  {
+    id: 'WordGame',
+    title: 'Que palavra é essa?',
+    description: 'Ajude a completar as palavras encontrando a letra que falta!',
+    icon: '🔡',
+    color: 'bg-pastel-green',
+  },
+  
   {
     id: 'ExpressionGame',
     title: 'Expressões Numéricas',

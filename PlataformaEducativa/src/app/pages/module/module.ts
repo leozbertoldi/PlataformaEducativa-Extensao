@@ -2,17 +2,29 @@ import { Component, inject } from '@angular/core';
 import { Modules } from "../../models/module";
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgClass } from '@angular/common';
+
 import { MathGame } from '../../games/math-game/math-game';
 import { MemoryGame } from '../../games/memory-game/memory-game';
 import { SequenceGame } from '../../games/sequence-game/sequence-game';
 import { BiggerGame } from '../../games/bigger-game/bigger-game';
 import { ColorGame } from '../../games/color-game/color-game';
+import { WordGame } from '../../games/word-game/word-game';
 import { ExpressionGame } from '../../games/expression-game/expression-game';
 import { AimGame } from '../../games/aim-game/aim-game';
 
 @Component({
   selector: 'app-module',
-  imports: [MathGame, MemoryGame, SequenceGame, BiggerGame, ColorGame, ExpressionGame, AimGame, NgClass],
+  imports: [
+    MathGame,
+    MemoryGame,
+    SequenceGame,
+    BiggerGame,
+    ColorGame,
+    WordGame,
+    ExpressionGame,
+    AimGame,
+    NgClass
+  ],
   templateUrl: './module.html',
   styleUrl: './module.css',
 })

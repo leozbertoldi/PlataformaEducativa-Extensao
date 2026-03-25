@@ -1,0 +1,25 @@
+<div class="game-container">
+  <h1 class="game-title">Que palavra é essa?</h1>
+
+  <div class="word-icon">
+    {{ fases[faseAtual].icone }}
+  </div>
+
+  <div class="word-display">
+    {{ palavraExibida }}
+  </div>
+
+  <div class="options-container">
+    <button 
+      *ngFor="let letra of opcoesEmbaralhadas" 
+      (click)="verificarLetra(letra)" 
+      [disabled]="bloquearCliques" 
+      class="btn-option">
+      {{ letra }}
+    </button>
+  </div>
+
+  <div class="feedback-message" [ngClass]="{'success': mensagem.includes('Isso'), 'error': mensagem.includes('Essa')}">
+    {{ mensagem }}
+  </div>
+</div>
