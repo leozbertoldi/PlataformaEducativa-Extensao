@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, signal} from '@angular/core';
 import {CommonModule } from '@angular/common';
 
 @Component({
@@ -33,11 +33,11 @@ export class WordGame implements OnInit{
         { icone: '📈', exibicao: 'CRE _ ER', correta: 'SC', opcoes: ['SC', 'S', 'SS', 'Ç'] } // Crescer
     ];
 
-    faseAtual = 0;
-    opcoesEmbaralhadas: string[] = [];
-    mensagem = '';
-    bloquearCliques = false;
-    palavraExibida = '';
+    faseAtual = signal(0);
+    opcoesEmbaralhadas = signal<string[]>([]);
+    mensagem = signal('');
+    bloquearCliques = signal(false);
+    palavraExibida = signal('');
 
     ngOnInit() {
         // Inicializa a palavra exibida com o valor da fase (ex: "CA _ O")
@@ -46,27 +46,30 @@ export class WordGame implements OnInit{
     }
 
     carregarFase() {
-    this.mensagem = '';
-    this.bloquearCliques = false;
-    this.palavraExibida = this.fases[this.faseAtual].exibicao;
-    this.opcoesEmbaralhadas = [...this.fases[this.faseAtual].opcoes].sort(() => Math.random() - 0.5);
+        this.mensagem.set('');
+        this.bloquearCliques.set(false);
+        this.palavraExibida.set(this.fases[this.faseAtual()].exibicao);
+        this.opcoesEmbaralhadas.set([...this.fases[this.faseAtual()].opcoes].sort(() => Math.random() - 0.5));
     }
 
     verificarLetra(letra: string) {
         // Pega a fase atual para facilitar a leitura
-        const fase = this.fases[this.faseAtual];
+        const fase = this.fases[this.faseAtual()];
 
         if (letra === fase.correta) {
             // Se acertou, verificamos se tem próxima fase
-            if (this.faseAtual < this.fases.length - 1) {
-                this.faseAtual++; // Sobe o nível
-                this.carregarFase(); // Já carrega tudo novo (reseta bloqueio e embaralha)
-                this.mensagem = 'Isso mesmo! Arrasou! 🌟';
+            if (this.faseAtual() < this.fases.length - 1) {
+                this.mensagem.set('Isso mesmo! Arrasou! 🌟');
+                this.bloquearCliques.set(true); // Bloqueia cliques para evitar múltiplos acertos
+                setTimeout(() => {
+                    this.faseAtual.update((value) => value + 1); // Sobe o nível
+                    this.carregarFase();
+                }, 2000); // Delay de 2 segundos antes de carregar a próxima fase
             } else {
-                this.mensagem = 'Parabéns! Você completou tudo! 🏆';
+                this.mensagem.set('Parabéns! Você completou tudo! 🏆');
             }
         } else {
-            this.mensagem = 'Essa não... tente de novo! 🤔';
+            this.mensagem.set('Essa não... tente de novo! 🤔');
         }
     }
 }
