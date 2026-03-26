@@ -40,13 +40,14 @@ export class WordGame implements OnInit{
     palavraExibida = '';
 
     ngOnInit() {
+        // Inicializa a palavra exibida com o valor da fase (ex: "CA _ O")
+        this.fases.sort(() => Math.random() - 0.5); // Embaralha as fases para cada jogo
         this.carregarFase();
     }
 
     carregarFase() {
     this.mensagem = '';
     this.bloquearCliques = false;
-    // Inicializa a palavra exibida com o valor da fase (ex: "CA _ O")
     this.palavraExibida = this.fases[this.faseAtual].exibicao;
     this.opcoesEmbaralhadas = [...this.fases[this.faseAtual].opcoes].sort(() => Math.random() - 0.5);
     }
