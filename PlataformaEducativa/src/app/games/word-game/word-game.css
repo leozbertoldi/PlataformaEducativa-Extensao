@@ -33,6 +33,13 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 600px) {
+  .word-display {
+    font-size: 2rem;
+    letter-spacing: 8px;
+  }
+}
+
 /* Container dos botões */
 .options-container {
   display: grid;
