@@ -1,16 +1,6 @@
 @import "tailwindcss";
 
 @layer components {
-  .btn-back {
-    @apply flex items-center
-           text-zinc-800 font-medium 
-           bg-red-300
-           px-4 py-2 rounded-lg 
-           hover:bg-red-400
-           cursor-pointer
-           transition duration-200;
-  }
-
   .bg-pastel-blue {
     @apply bg-[#A7C7E7];
   }
