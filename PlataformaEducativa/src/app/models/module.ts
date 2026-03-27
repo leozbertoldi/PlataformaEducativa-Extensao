@@ -1,3 +1,4 @@
+//para procurar ícones de lucide-angular, acesse: https://lucide.dev/icons/
 import { Brain, Calculator, LayoutGrid, Trophy, Palette, Sigma, BowArrow, CaseUpper } from 'lucide-angular';
 
 export const Modules = [
