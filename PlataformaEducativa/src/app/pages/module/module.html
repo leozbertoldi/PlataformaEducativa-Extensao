@@ -3,8 +3,8 @@
 }
 @else {
     <div class="min-h-screen p-4" [ngClass]="module?.color">
-        <button class="btn-back" (click)="back()"> 
-            <span class="material-icons text-xl">arrow_back</span>
+        <button (click)="back()"> 
+            <lucide-angular [img]="Back" class="w-15 h-15 text-red-400"></lucide-angular>
         </button>
         @switch (module?.id) {
             @case ('MathGame') {

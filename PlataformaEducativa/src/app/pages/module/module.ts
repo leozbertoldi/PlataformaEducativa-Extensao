@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Modules } from "../../models/module";
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgClass } from '@angular/common';
+import { LucideAngularModule, SquareArrowLeft} from 'lucide-angular';
 
 import { MathGame } from '../../games/math-game/math-game';
 import { MemoryGame } from '../../games/memory-game/memory-game';
@@ -11,6 +12,8 @@ import { ColorGame } from '../../games/color-game/color-game';
 import { WordGame } from '../../games/word-game/word-game';
 import { ExpressionGame } from '../../games/expression-game/expression-game';
 import { AimGame } from '../../games/aim-game/aim-game';
+
+
 
 @Component({
   selector: 'app-module',
@@ -23,7 +26,8 @@ import { AimGame } from '../../games/aim-game/aim-game';
     WordGame,
     ExpressionGame,
     AimGame,
-    NgClass
+    NgClass,
+    LucideAngularModule
   ],
   templateUrl: './module.html',
   styleUrl: './module.css',
@@ -31,6 +35,8 @@ import { AimGame } from '../../games/aim-game/aim-game';
 export class Module {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  
+  Back = SquareArrowLeft;
   
   module: any;
 
