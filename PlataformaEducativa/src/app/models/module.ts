@@ -13,14 +13,14 @@ export const Modules = [
     id: 'MemoryGame',
     title: 'Decore a Sequência',
     description: 'Um jogo para melhorar sua memória visual e concentração.',
-    icon: Brain,
+    icon: LayoutGrid,
     color: 'bg-pastel-yellow',
   },
   {
     id: 'SequenceGame',
     title: 'Próximo da Sequência',
     description: 'Pratique identificar padrões e sequências.',
-    icon: LayoutGrid,
+    icon: Brain,
     color: 'bg-pastel-pink',
   },
   {
