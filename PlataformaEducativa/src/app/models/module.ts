@@ -1,4 +1,4 @@
-import { Brain, Calculator, LayoutGrid, Trophy, Palette, Sigma, BowArrow, WholeWord } from 'lucide-angular';
+import { Brain, Calculator, LayoutGrid, Trophy, Palette, Sigma, BowArrow, CaseUpper } from 'lucide-angular';
 
 export const Modules = [
   {
@@ -41,7 +41,7 @@ export const Modules = [
     id: 'WordGame',
     title: 'Que palavra é essa?',
     description: 'Ajude a completar as palavras encontrando a letra que falta!',
-    icon: WholeWord,
+    icon: CaseUpper,
     color: 'bg-pastel-green',
   },
   
