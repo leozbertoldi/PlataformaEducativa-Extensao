@@ -6,7 +6,10 @@
     (click)="open()">
 
     <div class="text-3xl">
-        <h2>{{ module.icon }}</h2>
+        <lucide-angular 
+            [img]="module.icon" 
+            class="w-10 h-10 text-gray-700">
+        </lucide-angular>
     </div>
 
     <div>

@@ -1,9 +1,10 @@
 import { Component, inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-card',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './card.html',
   styleUrl: './card.css',
 })
