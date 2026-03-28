@@ -1,0 +1,28 @@
+<div class="game-container">
+  <div class="header">
+    <h2 class="title">Quem não combina?</h2>
+    <div class="score-badge">
+      Fase {{ faseAtual + 1 }} de {{ fases.length }}
+    </div>
+  </div>
+
+  <div class="message-box">
+    <p [class.success]="bloquearCliques">{{ mensagem }}</p>
+  </div>
+
+  <div class="emoji-grid">
+    <button 
+      *ngFor="let emoji of fases[faseAtual].opcoes" 
+      (click)="verificar(emoji)"
+      [disabled]="bloquearCliques"
+      class="emoji-button">
+      <span class="emoji-text">{{ emoji }}</span>
+    </button>
+  </div>
+
+  <div *ngIf="faseAtual === fases.length - 1 && bloquearCliques" class="footer">
+    <button (click)="faseAtual = 0; bloquearCliques = false; ngOnInit()" class="btn-restart">
+      Jogar Novamente 🔄
+    </button>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: #fdfdfd;
+}
+
+/* --- ÁREA DO RECIBO --- */
+.receipt {
+  background: #fff;
+  padding: 20px;
+  width: 280px;
+  border-left: 4px dashed #ccc;
+  border-right: 4px dashed #ccc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.receipt-header {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.receipt-item, .receipt-payment, .receipt-target {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.highlight {
+  color: #2e7d32;
+  font-weight: bold;
+  background: #e8f5e9;
+  padding: 2px 5px;
+}
+
+/* --- DISPLAY DO CAIXA --- */
+.register-display {
+  text-align: center;
+  background: #333;
+  color: #00ff00; /* Verde estilo tela de caixa antigo */
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.total-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* --- GAVETA DE DINHEIRO (BOTÕES) --- */
+.money-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 400px;
+}
+
+.money-icon { font-size: 1.5rem; }
+
+/* Botão Base */
+button {
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button:active { transform: scale(0.95); }
+
+/* Notas (💵) */
+.bill-btn {
+  background-color: #c8e6c9;
+  border: 2px solid #81c784;
+  border-radius: 8px;
+  width: 160px;
+  height: 80px;
+}
+
+/* Moedas (🪙) */
+.coin-btn {
+  background-color: #fff9c4;
+  border: 2px solid #fbc02d;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+/* --- BOTÃO RESET --- */
+.btn-reset {
+  background-color: #ffcdd2;
+  color: #c62828;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
