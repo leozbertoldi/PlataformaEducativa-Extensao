@@ -4,6 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { LucideAngularModule, SquareArrowLeft} from 'lucide-angular';
 
+import { MarketGame } from '../../games/market-game/market-game';
+import { MatchGame } from '../../games/match-game/match-game';
 import { MathGame } from '../../games/math-game/math-game';
 import { MemoryGame } from '../../games/memory-game/memory-game';
 import { SequenceGame } from '../../games/sequence-game/sequence-game';
@@ -12,6 +14,8 @@ import { ColorGame } from '../../games/color-game/color-game';
 import { WordGame } from '../../games/word-game/word-game';
 import { ExpressionGame } from '../../games/expression-game/expression-game';
 import { AimGame } from '../../games/aim-game/aim-game';
+
+
 
 
 
@@ -26,6 +30,8 @@ import { AimGame } from '../../games/aim-game/aim-game';
     WordGame,
     ExpressionGame,
     AimGame,
+    MatchGame,
+    MarketGame,
     NgClass,
     LucideAngularModule
   ],

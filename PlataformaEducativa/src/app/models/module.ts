@@ -1,5 +1,5 @@
 //para procurar ícones de lucide-angular, acesse: https://lucide.dev/icons/
-import { Brain, Calculator, LayoutGrid, Trophy, Palette, Sigma, BowArrow, CaseUpper } from 'lucide-angular';
+import { Brain, Calculator, LayoutGrid, Trophy, Palette, Sigma, BowArrow, CaseUpper, Search, Coins } from 'lucide-angular';
 
 export const Modules = [
   {
@@ -53,6 +53,7 @@ export const Modules = [
     icon: Sigma,
     color: 'bg-pastel-mint',
   },
+
   {
     id: "AimGame",
     title: "Tiro ao Alvo",
@@ -60,4 +61,21 @@ export const Modules = [
     icon: BowArrow,
     color: "bg-pastel-cyan"
   },
+
+  {
+    id: "MatchGame",
+    title: "Quem não combina?",
+    description: "Encontre o objeto que está no grupo errado!",
+    icon: Search,
+    color: "bg-pastel-lavender",
+  },
+
+  {
+    id: "MarketGame",
+    title: "Mestre do Troco",
+    description: "Seja o caixa do dia e dê o troco certinho com notas e moedas!",
+    icon: Coins,
+    color: "bg-pastel-yellow",
+    component: "MarketGame"
+  }
 ];

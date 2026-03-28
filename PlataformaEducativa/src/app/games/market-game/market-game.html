@@ -1,0 +1,50 @@
+<div class="game-container">
+  <div class="header">
+    <h2 class="title">Mestre do Troco 🪙</h2>
+    <div class="receipt">
+      <div class="receipt-header">CUPOM FISCAL</div>
+      <div class="receipt-item">
+        <span>{{ fases[faseAtual].item }}</span>
+        <span>R$ {{ fases[faseAtual].preco.toFixed(2) }}</span>
+      </div>
+      <div class="receipt-line"></div>
+      <div class="receipt-payment">
+        <span>O cliente pagou:</span>
+        <strong>R$ {{ fases[faseAtual].pago.toFixed(2) }}</strong>
+      </div>
+      <div class="receipt-target">
+        <span>Troco devido:</span>
+        <span class="highlight">R$ {{ fases[faseAtual].troco.toFixed(2) }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="register-display">
+    <p class="status-msg">{{ mensagem }}</p>
+    <div class="counter-box">
+      <small>Troco na mão:</small>
+      <div class="total-value">R$ {{ valorEntregue.toFixed(2) }}</div>
+    </div>
+  </div>
+
+  <div class="money-drawer">
+    <div class="money-grid">
+      <button 
+        *ngFor="let v of fases[faseAtual].opcoes" 
+        (click)="adicionarTroco(v)"
+        [disabled]="bloquearCliques"
+        [ngClass]="v >= 2 ? 'bill-btn' : 'coin-btn'">
+        <span class="money-icon">{{ v >= 2 ? '💵' : '🪙' }}</span>
+        <span class="money-label">R$ {{ v.toFixed(2) }}</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button (click)="valorEntregue = 0; mensagem = 'Vamos recomeçar o troco!'" 
+            class="btn-reset" 
+            [disabled]="bloquearCliques">
+      Limpar Mão 🧹
+    </button>
+  </div>
+</div>

@@ -7,6 +7,12 @@
             <lucide-angular [img]="Back" class="w-15 h-15 text-red-400"></lucide-angular>
         </button>
         @switch (module?.id) {
+            @case ('MatchGame') {
+                <app-match-game></app-match-game>
+            } 
+            @case ('MarketGame') {
+                <app-market-game></app-market-game>
+            } 
             @case ('MathGame') {
                 <app-math-game></app-math-game>
             }
