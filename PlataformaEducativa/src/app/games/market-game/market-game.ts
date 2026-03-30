@@ -33,7 +33,7 @@ export class MarketGame implements OnInit {
     circleDollarSign = CircleDollarSign;
     faseAtual = 0;
     valorEntregue = 0;
-    mensagem = "Quanto de troco você deve dar?";
+    mensagem = "Forneça o troco:";
     bloquearCliques = false;
 
     ngOnInit() {
@@ -57,7 +57,7 @@ export class MarketGame implements OnInit {
             if (this.faseAtual < this.fases.length - 1) {
                 this.faseAtual++;
                 this.valorEntregue = 0;
-                this.mensagem = "Boa! Próximo cliente na fila! 🛒";
+                this.mensagem = "Boa! Próximo cliente na fila!";
             } else {
                 this.mensagem = "Incrível! Você fechou o caixa com perfeição! 🏆";
                 this.bloquearCliques = true;

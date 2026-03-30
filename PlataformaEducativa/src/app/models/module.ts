@@ -75,7 +75,7 @@ export const Modules = [
     title: "Mestre do Troco",
     description: "Seja o caixa do dia e dê o troco certinho com notas e moedas!",
     icon: Coins,
-    color: "bg-pastel-yellow",
+    color: "bg-white",
     component: "MarketGame"
   }
 ];
