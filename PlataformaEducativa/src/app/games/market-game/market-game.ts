@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LucideAngularModule, Banknote, CircleDollarSign } from 'lucide-angular';
 
 @Component({
     selector: 'app-market-game',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, LucideAngularModule],
     templateUrl: './market-game.html',
     styleUrls: ['./market-game.css']
 })
@@ -28,6 +29,8 @@ export class MarketGame implements OnInit {
         { item: '🥤 Suco de Laranja', preco: 6.80, pago: 10, troco: 3.20, opcoes: [2, 1, 0.10, 0.50] }
     ];
 
+    banknote = Banknote;
+    circleDollarSign = CircleDollarSign;
     faseAtual = 0;
     valorEntregue = 0;
     mensagem = "Quanto de troco você deve dar?";

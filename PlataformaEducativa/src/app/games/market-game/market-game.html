@@ -27,15 +27,27 @@
     </div>
   </div>
 
-  <div class="money-drawer">
+  <div>
     <div class="money-grid">
       <button 
-        *ngFor="let v of fases[faseAtual].opcoes" 
-        (click)="adicionarTroco(v)"
-        [disabled]="bloquearCliques"
-        [ngClass]="v >= 2 ? 'bill-btn' : 'coin-btn'">
-        <span class="money-icon">{{ v >= 2 ? '💵' : '🪙' }}</span>
-        <span class="money-label">R$ {{ v.toFixed(2) }}</span>
+          *ngFor="let v of fases[faseAtual].opcoes" 
+          (click)="adicionarTroco(v)"
+          [disabled]="bloquearCliques"
+          [ngClass]="v >= 2 ? 'bill-btn' : 'coin-btn'">
+          <span>
+              @if (v >= 2) {
+                <lucide-angular 
+                  [img]="banknote" 
+                  class="w-10 h-10 text-green-700">
+                </lucide-angular>
+              } @else {
+                <lucide-angular 
+                  [img]="circleDollarSign" 
+                  class="w-10 h-10 text-yellow-400">
+                </lucide-angular>
+              }
+          </span>
+          <span class="money-label">R$ {{ v.toFixed(2) }}</span>
       </button>
     </div>
   </div>

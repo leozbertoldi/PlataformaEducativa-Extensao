@@ -64,7 +64,6 @@
   max-width: 400px;
 }
 
-.money-icon { font-size: 1.5rem; }
 
 /* Botão Base */
 button {
@@ -92,9 +91,9 @@ button:active { transform: scale(0.95); }
 .coin-btn {
   background-color: #fff9c4;
   border: 2px solid #fbc02d;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  border-radius: 8px;
+  width: 160px;
+  height: 80px;
 }
 
 /* --- BOTÃO RESET --- */
