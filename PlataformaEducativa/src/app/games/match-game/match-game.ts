@@ -53,7 +53,7 @@ export class MatchGame implements OnInit {
                 this.bloquearCliques = true; 
             }
         } else {
-            this.mensagem = "Tente novamente 👀!";
+            this.mensagem = "Tente novamente!";
         }
     }
 }

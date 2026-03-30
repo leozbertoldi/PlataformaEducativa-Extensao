@@ -43,8 +43,7 @@
 /* --- DISPLAY DO CAIXA --- */
 .register-display {
   text-align: center;
-  background: #333;
-  color: #00ff00; /* Verde estilo tela de caixa antigo */
+  border: 4px solid #22c55e; /* Verde estilo tela de caixa antigo */
   padding: 15px;
   border-radius: 10px;
   width: 100%;

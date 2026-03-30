@@ -33,7 +33,7 @@ export class MarketGame implements OnInit {
     circleDollarSign = CircleDollarSign;
     faseAtual = 0;
     valorEntregue = 0;
-    mensagem = "Forneça o troco:";
+    mensagem = "Forneça o troco correto";
     bloquearCliques = false;
 
     ngOnInit() {

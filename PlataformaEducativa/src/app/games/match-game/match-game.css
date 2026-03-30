@@ -16,26 +16,19 @@
   margin-bottom: 1.5rem;
 }
 
-.title {
-  color: #5d3fd3; /* Um roxo vibrante mas suave */
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
 .score-badge {
-  background-color: #e0f2f1; /* Verde pastel */
   color: #00796b;
   padding: 5px 15px;
   border-radius: 20px;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   display: inline-block;
 }
 
 /* Caixa de Mensagem */
 .message-box {
-  background-color: #fff9c4; /* Amarelo pastel */
-  border: 2px dashed #fbc02d;
+  background-color: #0;
+  border: 4px dashed #ce93d8;
   border-radius: 15px;
   padding: 1rem;
   width: 100%;
@@ -71,7 +64,7 @@
 }
 
 .emoji-button {
-  background-color: #f3e5f5; /* Roxo pastel */
+  background-color: #0000;
   border: 4px solid #ce93d8;
   border-radius: 25px;
   padding: 30px;
