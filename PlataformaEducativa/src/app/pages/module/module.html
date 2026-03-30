@@ -4,7 +4,7 @@
 @else {
     <div class="min-h-screen p-4" [ngClass]="module?.color">
         <button class="cursor-pointer" (click)="back()"> 
-            <lucide-angular [img]="Back" class="w-15 h-15 text-red-400"></lucide-angular>
+            <lucide-angular [img]="Back" class="w-15 h-15 text-red-400 hover:text-red-500"></lucide-angular>
         </button>
         @switch (module?.id) {
             @case ('MatchGame') {
