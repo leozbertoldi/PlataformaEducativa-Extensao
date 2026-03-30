@@ -13,14 +13,15 @@
     </h1>
 
     <!-- OPÇÕES -->
-    <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8 w-full max-w-5xl mx-auto">
+    <div class="flex flex-wrap justify-center gap-2 p-4 w-full max-w-5xl mx-auto">
         @for (number of numbers; track $index) {
             <button
                 (click)="checkAnswer({ number: number.number, color: number.color, isEven: number.isEven })"
                 [style.color]="colorMap[number.color]"
-                class="p-2 rounded-xl text-5xl font-bold
+                class="w-[30%] md:w-[30%] lg:w-[22%] 
+                    rounded-xl text-5xl font-bold
                     hover:scale-105 active:scale-95 transition 
-                    bg-pastel-orange cursor-pointer lg:text-6xl">
+                    cursor-pointer lg:text-6xl">
                 
                 {{ number.number }}
             </button>

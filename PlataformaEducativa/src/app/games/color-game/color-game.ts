@@ -17,7 +17,7 @@ type item = {
 
 export class ColorGame {
 
-  colors = ['vermelho', 'azul', 'verde', 'amarelo', 'roxo', 'rosa', 'marrom', 'preto', 'branco', 'cinza'];
+  colors = ['vermelho', 'azul', 'verde', 'amarelo', 'roxo', 'rosa', 'marrom', 'preto', 'branco', 'cinza', 'laranja'];
   number = Math.floor(Math.random() * 10) + 1;
   paridade = this.number % 2 === 0 ? 'par' : 'ímpar';
   correctColor = this.colors[Math.random() * this.colors.length | 0];
@@ -37,7 +37,8 @@ export class ColorGame {
     marrom: '#92400e',   // brown-500
     preto: '#000000',
     branco: '#ffffff',
-    cinza: '#6b7280'     // gray-500
+    cinza: '#6b7280',     // gray-500
+    laranja: '#f97316'     // orange-500
   };
 
   generateNewRound() {
@@ -73,7 +74,7 @@ export class ColorGame {
 
     numbers.push({number: this.number, color: this.correctColor, isEven: this.number % 2 === 0});
 
-    while (numbers.length < 12) {
+    while (numbers.length < 18) {
       const num = Math.floor(Math.random() * 10) + 1;
       const color = this.colors[Math.random() * this.colors.length | 0];
       const exists = numbers.some(

@@ -35,7 +35,7 @@ export const Modules = [
     title: 'Cores Loucas',
     description: 'Identifique cores e números rápido neste jogo divertido.',
     icon: Palette,
-    color: 'bg-pastel-orange',
+    color: 'bg-zinc-300',
   },
 
   {
